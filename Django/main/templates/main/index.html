@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Hub</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, #4b88c9, #8064cd); 
+            color: white !important;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #4a39ad, #1a249a);
+           
+        }
+        .navbar-nav .nav-link {
+        color: white !important;
+        } 
+        .navbar-brand {
+        color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hostel Hub </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <center><h1>More than a place to stay, an experience to remember!</h1></center> 
+         <div class="d-flex justify-content-center align-items-center">
+             <img src="{% static 'images/bg.jpg' %}" alt="Image" class="img-fluid"  width="500" />
+         </div>
+    </div>
+    
+    <div class="container mt-5">
+       
+        <p>Hostel Hub is dedicated to redefining the hostel stay experience by offering a seamless and memorable journey for every use. Our commitment to excellence shines through in the exceptional features and services we provide. From food polling and comfortable query raising to top-notch scheduling systems, we ensure that your stay is nothing short of extraordinary. We go the extra mile to create a welcoming atmosphere that fosters connections and unforgettable moments. Hostel Hub is your trusted partner, offering more than just a place to rest – we offer a vibrant and enriching experience that you'll treasure long after your journey at TCE ends. </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

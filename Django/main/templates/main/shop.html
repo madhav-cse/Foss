@@ -1,0 +1,141 @@
+{% load crispy_forms_tags %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Hub</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, #4b88c9, #8064cd); 
+            color: white ;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #4a39ad, #1a249a);
+           
+        }
+        .navbar-nav .nav-link {
+        color: white !important;
+        } 
+        .navbar-brand {
+        color: white !important;
+        }
+        .query-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .query-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #23d8b4;
+            width: 300px;
+        }
+
+        .delete-button {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .image-container{
+            display: flex;
+        }
+        .image-card {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        #find-status-btn {
+            margin: 20px;
+        }
+        /* In your CSS stylesheet */
+        .attractive-text {
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: colorChange 3s infinite alternate;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #333;
+            }
+            50% {
+                color: #FF5733; /* Change to the desired text color */
+                background-color: #f5f5f5; /* Change to the desired background color */
+            }
+            100% {
+                color: #333;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shop Live Status </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'hostel' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form method="post" action="{% url 'shop' %}" >
+    
+        {% csrf_token %}
+        <div class="image-container">
+        <div class="image-card">
+            <img src="{% static 'images/open.jpg' %}" alt="Image 1" height=100% width="100%">
+        </div>
+        <div class="image-card">
+            <img src="{% static 'images/closed.jpg' %}" alt="Image 2"height=100% width="100%">
+        </div>
+    </div>
+        <label for="shop-status">Select Shop Status:</label>
+        <select id="shop_status" name="shop_status">
+            <option value="open">Open Shop</option>
+            <option value="closed">Closed Shop</option>
+        </select>
+        <button type="submit">Find Status</button>
+        <h1 id="status-text" class="attractive-text"><center>{{ ret_str }}</center></h1>
+        
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

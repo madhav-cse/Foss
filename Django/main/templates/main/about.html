@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Hub</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, #4b88c9, #8064cd); 
+            color: white !important;
+        }
+        a[href^="https://forms.gle"] {
+        color: rgb(100, 228, 233) !important;
+        }
+        .navbar {
+            background: linear-gradient(to right, #4a39ad, #1a249a);
+           
+        }
+        .navbar-nav .nav-link {
+        color: white !important;
+        } 
+        .navbar-brand {
+        color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hostel Hub </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <center><h1>About Us</h1></center> 
+         
+     </div>
+ 
+     <div class="container mt-5">
+        
+         <p><i><center>Welcome to Hostel Hub. We are dedicated to making your stay as comfortable and enjoyable as possible.</center></i>
+             <hr>
+             Hostel Hub offers:
+             <br>
+             <br>
+             1. Food Polling:
+             To understand and make necessary food arrangements for that day. 
+             <br>
+             2. Issue Raising:
+             
+             We believe in prompt issue resolution. If you encounter any problems during your stay, our Issue Raising feature allows you to report them quickly and efficiently. From maintenance issues to noise complaints, we are here to address your concerns. Your comfort is our priority.
+             <br>
+             3. Shop Open/Close Status:
+             
+             Our hostel shops are here to provide you with essential items and snacks. To ensure your convenience, we provide real-time information on the shop's open and close status. You can check whether the shop is currently open or closed, helping you plan your purchases accordingly.
+             <br>
+            
+             Thank you for choosing Hostel Hub. We are committed to making your stay comfortable and memorable. If you have any questions or need assistance, please don't hesitate to contact our friendly staff.
+             
+             Enjoy your stay!
+             <hr>
+             <center><i>Your Feedback Matters</i></center>
+             <br>
+             <br>
+             
+             We value your feedback and suggestions. 
+             If you have any ideas or recommendations to enhance your hostel experience, please feel free to fill this form <a href="https://forms.gle/611Q3sDN1z1EAGeo6">Gform</a>. Your input helps us continually improve our services.
+             </p>
+ 
+         </div>
+     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+         body {
+             font-family: 'Georgia', serif;
+         }
+ 
+     </style>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

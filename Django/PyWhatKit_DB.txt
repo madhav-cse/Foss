@@ -1,0 +1,30 @@
+Date: 22/9/2023
+Time: 21:50
+Phone Number: +919345359770
+Message: Shop Status at 2023-09-22 21:50=>Shop is Open
+--------------------
+Date: 22/9/2023
+Time: 21:55
+Phone Number: +919345359770
+Message: Shop Status at 2023-09-22 21:55=>Shop is closed
+--------------------
+Date: 22/9/2023
+Time: 21:56
+Phone Number: +918508681941
+Message: Shop Status at 2023-09-22 21:56=>Shop is closed
+--------------------
+Date: 23/9/2023
+Time: 0:40
+Phone Number: +919342268963
+Message: Thank you for polling your food preference. You have opted for lunch dinner.Wishing you a happy stay! Team HostelHub
+--------------------
+Date: 23/9/2023
+Time: 0:42
+Phone Number: +919342268963
+Message: Shop Status at 2023-09-23 00:41=>Shop is closed.Wishing you a happy stay! Team HostelHub
+--------------------
+Date: 23/9/2023
+Time: 1:11
+Phone Number: +919342268963
+Message: Shop Status at 2023-09-23 01:11=>Shop is Open.Wishing you a happy stay! Team HostelHub
+--------------------
